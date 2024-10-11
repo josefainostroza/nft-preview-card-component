@@ -20,27 +20,88 @@ ul {
   margin-bottom: 0px;
 }
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   font-family: 'outfit', sans-serif;
   background-color: #0d192c;
+  height: 100vh;
 }
 .flex {
   display: flex;
   justify-content: center;
   padding: 62px 24px;
 }
+@media screen and (width>768px) {
+  .flex {
+    top: 62px;
+    left: auto;
+    margin: auto;
+  }
+}
 
 .card {
   width: 327px;
-  height: 543px;
   border-radius: 15px;
   background-color: #15263f;
   padding: 24px;
+  position: relative;
 }
+
+@media screen and (width>768px) {
+  .card {
+    width: 350px;
+  }
+}
+
 .image1 {
+  position: relative;
   width: 278px;
   height: 278px;
 }
+@media screen and (width>768px) {
+  .image1 {
+    width: 302px;
+    height: 302px;
+    color: #00fff8;
+    opacity: 100%;
+    border-radius: 8px;
+  }
+}
+@media (hover: hover) {
+  .image1:hover {
+    background-color: #00fff8;
+  }
+}
+.cuadrado {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 278px;
+  height: 278px;
+  background-color: #00fff8;
+  border-radius: 8px;
+  opacity: 0;
+}
+.view {
+  position: absolute;
+  top: 125px;
+  left: 125px;
+}
+@media screen and (width>768px) {
+  .cuadrado {
+    width: 302px;
+    height: 302px;
+  }
+}
+@media (hover: hover) {
+  .cuadrado:hover {
+    background-color: rgb(0, 255, 248, 0.5);
+    opacity: 1;
+  }
+}
+
 .image2 {
   width: 11px;
   height: 18px;
@@ -61,6 +122,12 @@ body {
   font-size: 22px; /*tamaño de la fuente*/
   color: #fff;
 }
+@media (hover: hover) {
+  .text-h1:hover {
+    color: #00fff8;
+  }
+}
+
 .text-h2 {
   font-weight: 300; /*grosor, peso de la fuente*/
   font-size: 18px; /*tamaño de la fuente*/
@@ -89,13 +156,22 @@ body {
   color: #8bacd9;
   margin-right: 65px;
 }
+@media screen and (width>768px) {
+  .text-card {
+    margin-right: 90px;
+  }
+}
+
 .jules {
   color: #fff;
 }
+@media (hover: hover) {
+  .jules:hover {
+    color: #00fff8;
+  }
+}
 .eth {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
 }
 .avatar {
@@ -106,8 +182,7 @@ body {
 }
 .clock {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+
   align-items: center;
 }
 .flex1 {
